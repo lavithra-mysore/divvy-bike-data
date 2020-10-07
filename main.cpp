@@ -24,7 +24,8 @@ using namespace std;
 //
 //ordering
 //
-class ordering //it orders in such a way that gives priority second value in pair
+//it orders in such a way that gives priority second value in pair
+class ordering
 {
 public:
   bool operator()(const pair<double,double>& p1, const pair<double,double>& p2) const
@@ -84,8 +85,8 @@ struct StationData// we use structure to use value in hashmap
 //
 // TripsData
 // 
- 
-struct TripsData// we use structure to use value in hashmap of trips data
+// we use structure to use value in hashmap of trips data
+struct TripsData
 { // it stores value for trips
 	string TripId;
 	string StartTime;
@@ -131,8 +132,9 @@ int string2int(string s)
 // Given a filename denoting stations data,
 // inputs that data into the given hash table.
 // 
+// it inputs data in stationsById and stationsByAbbrev
 bool inputDataStation(string filename, hashmap<string, StationData*>& stationsById,hashmap<string, StationData*>& stationsByAbbrev)
-{// it inputs data in stationsById and stationsByAbbrev 
+{ 
 	ifstream  infile(filename);
 	
 	if (!infile.good())
@@ -281,7 +283,8 @@ bool inputDataTrips(string filename, hashmap<string,TripsData>& tripsById,hashma
 //
 // Help Function
 // 
-void help(){// if we user want to know what is input they can call input
+// if we user want to know what is input they can call input
+void help(){
     cout<<"Available commands\n";
     cout<<" Enter a station id (e.g. 341)\n";
     cout<<" Enter a station abbreviation (e.g. Adler)\n";
